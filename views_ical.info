@@ -1,6 +1,0 @@
-name = Views iCal
-description = Create iCal feeds with Views.
-dependencies[] = views
-package = Views
-core = 7.x
-files[] = views_ical_plugin_style_ical_feed.inc
