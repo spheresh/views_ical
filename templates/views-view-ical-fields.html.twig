@@ -2,6 +2,7 @@
 /**
  * @file
  * Default view template to display all the fields in a row.
+ * IMPORTANT: For iCal compliance this template contains Windows line endings
  *
  * Available variables:
  * - view: The view in use.
@@ -30,8 +31,7 @@
  *
  * @ingroup themeable
  */
-#}BEGIN:VEVENT
-{% for field in fields -%}
+#}BEGIN:VEVENT{{ "\r\n" }}{% for field in fields -%}{% spaceless %}
   {{ field.separator }}
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
@@ -50,6 +50,4 @@
   {%- endif %}
   {%- if field.wrapper_element -%}
     </{{ field.wrapper_element }}>
-  {%- endif %}
-{%- endfor %}
-{{ "\r\n" }}END:VEVENT{{ "\r\n" }}
+  {%- endif %}{% endspaceless %}{{ "\r\n" }}{%- endfor %}END:VEVENT
