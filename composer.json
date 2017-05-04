@@ -1,0 +1,13 @@
+{
+    "name": "spheresh/views_ical",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "Yuriy Boychenko",
+            "email": "yuboychenko@gmail.com"
+        }
+    ],
+    "require": {
+        "eluceo/ical": "^0.11.3"
+    }
+}
